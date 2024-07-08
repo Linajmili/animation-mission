@@ -1,0 +1,203 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 10px 0;
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #a7a7a7;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+   
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    
+}
+
+header {
+    position: relative;
+    margin-top: 60px; 
+    overflow: hidden;
+}
+
+
+
+header .container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 100px 20px;
+    color: black;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    animation: fadeIn 2s ease-in-out ;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    animation: fadeIn 2s ease-in-out  ;
+}
+
+header .button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    animation: fadeIn 2s ease-in-out ;
+    transition: background-color 0.3s ease;
+}
+
+header .button:hover {
+    background-color: #ff4500;
+}
+
+
+header {
+    background-image: url('https://www.opticalca.com/skin/reboot/images/slider/slide_01.jpg'); /* Replace with your image URL */
+    background-size: 200%; /* Initial size */
+    background-position: center;
+    animation: backgroundZoomOut 5s ease-in-out forwards;
+    animation-fill-mode: forwards; /* Ensure the backgroundZoomOut animation stays at the final state */
+}
+@keyframes backgroundZoomOut {
+    0% {
+        background-size: 200%; /* Start big */
+        background-position: center;
+    }
+    100% {
+        background-size: 100%; /* End smaller and further */
+        background-position: center;
+    }
+}
+section.features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+section.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+section.features .feature {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+section.features .feature:hover {
+    transform: scale(1.05);
+}
+
+section.features .feature img{
+    width: 100%;
+    height:auto;
+    border-radius: 10px;
+    margin-bottom: 10%;
+}
+
+section.features h3 {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+}
+
+section.features p {
+    font-size: 1em;
+}
+section.clients {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+    max-width: 500px;
+    margin: 1em auto;
+    padding: 1em;
+    border-left: 5px solid #ff6347;
+    background-color: #f9f9f9;
+    position: relative; /* Needed for the animation */
+    animation: moveLeftToRight 10s linear infinite; /* Animation properties */
+}
+
+section.clients h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+/* Keyframes for left-to-right animation */
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+    color: white;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    section.features .feature {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    header .container {
+        padding: 20px;
+    }
+}
