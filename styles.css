@@ -87,19 +87,19 @@ header .button:hover {
 
 
 header {
-    background-image: url('https://www.opticalca.com/skin/reboot/images/slider/slide_01.jpg'); /* Replace with your image URL */
-    background-size: 200%; /* Initial size */
+    background-image: url('https://www.opticalca.com/skin/reboot/images/slider/slide_01.jpg'); 
+    background-size: 200%; 
     background-position: center;
-    animation: backgroundZoomOut 5s ease-in-out forwards;
-    animation-fill-mode: forwards; /* Ensure the backgroundZoomOut animation stays at the final state */
+    animation: backgroundZoomOut 5s ease-in-out forwards infinite ;
+    animation-fill-mode: forwards; 
 }
 @keyframes backgroundZoomOut {
     0% {
-        background-size: 200%; /* Start big */
+        background-size: 200%; 
         background-position: center;
     }
     100% {
-        background-size: 100%; /* End smaller and further */
+        background-size: 100%; 
         background-position: center;
     }
 }
@@ -154,8 +154,8 @@ section.clients {
     padding: 1em;
     border-left: 5px solid #ff6347;
     background-color: #f9f9f9;
-    position: relative; /* Needed for the animation */
-    animation: moveLeftToRight 10s linear infinite; /* Animation properties */
+    position: relative; 
+    animation: moveLeftToRight 10s linear infinite; 
 }
 
 section.clients h2 {
@@ -163,7 +163,7 @@ section.clients h2 {
     margin-bottom: 1em;
 }
 
-/* Keyframes for left-to-right animation */
+
 @keyframes moveLeftToRight {
     0% {
         transform: translateX(-50%);
